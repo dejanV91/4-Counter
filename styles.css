@@ -29,6 +29,10 @@ body{
     margin-bottom: 50px;
 }
 
+#value{
+    color: black;
+}
+
 .btn{
     font-family: 'Montserrat', sans-serif;
     background: transparent;
