@@ -1,45 +1,12 @@
 let counter=0;
 
-const countView=document.getElementById("value");
-const decreaseBtn= document.getElementsByClassName("decrease");
-const resetBtn= document.getElementsByClassName("reset");
-const increaseBtn= document.getElementsByClassName("increase");
+const countView= document.querySelector('#value');
+const buttons=document.querySelectorAll('.btn');
 
-decreaseBtn[0].addEventListener("click",function(){
-    counter--;
-    countView.textContent= counter;
-    if (counter > 0) {
-        countView.style.color = "green";
-    } else if (counter < 0) {
-        countView.style.color = "red";
-    } else {
-        countView.style.color = "black";
-    }
+buttons.forEach(function(singleBtn){
+    singleBtn.addEventListener("click" ,function(a){
+        let currentBtn=a.currentTarget;
+        
+    })
     
-})
-
-increaseBtn[0].addEventListener("click",function(){
-    counter++;
-    countView.textContent= counter;
-    if (counter > 0) {
-        countView.style.color = "green";
-    } else if (counter < 0) {
-        countView.style.color = "red";
-    } else {
-        countView.style.color = "black";
-    }
-})
-
-resetBtn[0].addEventListener("click",function(){
-    counter=0;
-    countView.textContent= counter;
-    if (counter > 0) {
-        countView.style.color = "green";
-    } else if (counter < 0) {
-        countView.style.color = "red";
-    } else {
-        countView.style.color = "black";
-    }
-})
-
-
+});
